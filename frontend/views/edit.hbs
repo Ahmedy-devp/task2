@@ -1,0 +1,27 @@
+{{>header}}
+{{>navbar}}
+<h3 class="text-center my-3 text-primary">Add New User</h3>
+<form method="post"> 
+    <div class="mb-3">
+    <label class="form-label">id</label>
+    <input class="form-control" name="id" value="{{data._id}}" disabled>
+  </div>
+    <div class="mb-3">
+    <label class="form-label">Title</label>
+    <input class="form-control" name="title" value="{{data.title}}">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Content</label>
+    <input class="form-control" name="content" value="{{data.content}}">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">due date</label>
+    <input class="form-control" name="dueDate" value="{{data.dueDate}}">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" name="status" disabled="disabled">
+    <label class="form-check-label" for="exampleCheck1">Status</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{{>footer}}

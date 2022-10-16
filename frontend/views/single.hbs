@@ -1,0 +1,39 @@
+{{>header}}
+{{>navbar}}
+ {{#if isFound}}
+  <section class="row">
+    <table class="table table-stripped">
+      <thead>
+        <tr>
+          <th>ID: {{taskData._id}}</th>
+          <th>Title: {{taskData.title}}</th>
+        </tr>
+        <tr>
+          <th>Content: {{taskData.content}}</th>
+          <th>due-date: {{taskData.dueDate}}</th>
+        </tr>
+        <tr>
+             <form method="post">
+                 <th>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="status">
+                      <label class="form-check-label" for="exampleCheck1">Status</label>
+                    </div>
+            </th>
+            <th>
+                 <button type="submit" class="btn btn-success">Complete</button>
+            </th>
+
+             </form>
+           
+        </tr>
+      </thead>
+    </table>
+  </section>
+  {{else}}
+  <div class="alert alert-danger">
+    User Not Found
+  </div>
+  {{/if}}
+</div>
+{{>footer}}
